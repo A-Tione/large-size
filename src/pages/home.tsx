@@ -1,78 +1,67 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import './home.scss';
+import {Chart1} from '../components/chart-1';
+import {Chart2} from '../components/chart-2';
+import {Chart3} from '../components/chart-3';
+import {Chart4} from '../components/chart-4';
+import {Chart5} from '../components/chart-5';
+import {Chart6} from '../components/chart-6';
+import {Chart7} from '../components/chart-7';
+import {Chart8} from '../components/chart-8';
+import {Chart9} from '../components/chart-9';
+import {Chart10} from '../components/chart-10';
+import {Chart11} from '../components/chart-11';
 
-import * as charts from 'echarts';
-
-const px = (n) => n / 2420 * (window as any).pageWidth;
 export const Home = () => {
-  const divRef = useRef(null);
-  useEffect(() => {
-    let myChart = charts.init(divRef.current);
-    myChart.setOption({
-      textStyle: {
-        fontSize: px(12),
-        color: '#79839E'
-      },
-      title: {show: false},
-      legend: {show: false},
-      xAxis: {
-        data: ['兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区', '兰州新区'],
-        axisTick: {show: false},
-        axisLine: {
-          lineStyle: {color: '#083B70'}
-        },
-        axisLabel: {
-          fontSize: px(12),
-          formatter(val) {
-            if (val.length > 2) {
-              const array = val.split('');
-              array.splice(2, 0, '\n');
-              return array.join('');
-            } else {
-              return val;
-            }
-          }
-        },
-      },
-      grid: {
-        x: px(40),
-        y: px(40),
-        x2: px(40),
-        y2: px(40),
-      },
-      yAxis: {
-        splitLine: {show: false},
-        axisLine: {
-          show: true,
-          lineStyle: {color: '#083B70'}
-        },
-        axisLabel: {
-          fontSize: px(12)
-        }
-      },
-      series: [{
-        type: 'bar',
-        data: [10, 20, 36, 41, 15, 26, 37, 18, 29]
-      }]
-    });
-  }, []);
+  const year = new Date().getFullYear()
   return (
     <div className="home">
       <header/>
       <main>
         <section className="section1">
-          <div className="bordered 管辖统计">
-            <h2>案发派出所管辖统计</h2>
-            <div ref={divRef} className="chart">
-      
+          <Chart1/>
+          <Chart2/>
+        </section>
+        <section className="section2">
+          <Chart3/>
+          <Chart4/>
+        </section>
+        <section className="bordered section3">
+          <Chart5/>
+        </section>
+        <section className="bordered section4">
+          <Chart6/>
+          <div className="bordered 年龄段">
+            <h2>犯罪人员年龄段分布</h2>
+            <div className="charts">
+              <Chart7/>
+              <Chart8/>
+              <Chart9/>
             </div>
           </div>
         </section>
-        <section className="bordered section2"></section>
-        <section className="bordered section3"></section>
-        <section className="bordered section4"></section>
-        <section className="bordered section5"></section>
+        <section className="section5">
+          <div className="bordered row1 案发类型">
+            <h2>案发类型统计</h2>
+            <div className="charts">
+              <Chart10/>
+              <Chart11/>
+            </div>
+          </div>
+          <div className="bordered row2 案发街道">
+            <h2>案发街道统计</h2>
+            <div className="charts">
+
+            </div>
+            <div className="bordered row3 作案手段">
+
+            </div>
+          </div>
+        </section>
       </main>
+      <footer>
+        &copy; 公安局 2020-{year}
+      </footer>
     </div>
   );
 };
