@@ -7,17 +7,12 @@
     border-radius: px(2); margin: 0 px(10);}
 }
 
-.home {
-  flex: 1;
-  display: flex;
+.home {flex: 1;display: flex;flex-direction: column;
+  background: #010310; color: white;
   font-size: px(16);
-  flex-direction: column;
-  background: #010310;
-  color: white;
   > header {
     height: px(99);
     background-size: cover;
-    background-image: url("../images/header.png");
     width: px(2420);
     margin: 0 auto;
   }
@@ -32,23 +27,23 @@
     justify-content: center;
   }
   > main {
-    flex: 1;
-    display: grid;
-    padding-top: px(30);
     width: px(2420);
     margin: 0 auto;
+    padding-top: px(30);
+    flex: 1;
+    display: grid;
     grid-template:
-            "box1 box2 box4 box5" 755fr
-            "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
+      "box1 box2 box4 box5" 755fr
+      "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
     grid-column-gap: px(28);
     grid-row-gap: px(28);
-    > section {
-      text-align: center;
+    > section {text-align: center;}
+    .bordered {
       border: 1px solid #0764bc;
       border-radius: 4px;
       position: relative;
       box-shadow: 0 0 2px 0 #0e325f, inset 0 0 2px 0 #0e325f;
-      background: #0f1139;
+      background: #0f113a;
       &::before {
         pointer-events: none;
         content: '';position: absolute;left: 0;right: 0;bottom: 0;top: 0;
@@ -100,6 +95,7 @@
       }
     }
     .管辖统计, .破获排名, .案发趋势, .案发时段, .战果, .籍贯, .年龄段, .案发类型, .案发街道, .作案手段 {
+      height: px(315);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -114,11 +110,10 @@
         text-shadow: 0 0 px(3) white;
       }
       .charts {
-        width: 100%;
-        flex: 1;
+        width: 100%;flex: 1;
         display: flex;
       }
-      .chart{
+      .chart {
         flex: 1;
         width: 100%;
       }
@@ -133,76 +128,40 @@
       }
       .legend {@extend %legend;}
     }
-    .年龄段 {
-      display: flex;
-      flex-direction: column;
+    .年龄段 {display: flex;flex-direction: column;
       height: px(363);
-
       > .charts {
         padding: px(30);
       }
-
       &-图1, &-图2, &-图3 {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
+        flex: 1;display: flex; flex-direction: column;
       }
-
       &-图1, &-图2 {
         .legend { @extend %legend;
-
-          .male {
-            background: #33a4fa;
-          }
-
-          .female {
-            background: #8d70f8;
-          }
+          .male {background: #33a4fa;}
+          .female {background: #8d70f8;}
         }
-
         .chart {
-          display: flex;
           position: relative;
-
-          > .main {
-            flex: 1;
-          }
-
-          > .text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: #33a4fa;
-            font-size: px(40);
-            text-shadow: 0 0 px(20) #33a4fa;
-            font-weight: bold;
-          }
+          display: flex;
+          > .main {flex: 1;}
+          > .text {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: #33a4fa; font-size: px(40); text-shadow: 0 0 px(20) #33a4fa;font-weight: bold;}
         }
       }
-
       &-图2 {
-        width: px(290);
-        flex-shrink: 0;
-
+        width: px(290); flex-shrink: 0;
         .legend {
           justify-content: flex-start;
         }
       }
-
       &-图3 {
         border: 1px solid #08397d;
-
-        h3 {
-          font-size: px(20);
-          color: #7ab6db;
-          margin-top: px(6);
-        }
+        h3 {font-size: px(20); color: #7ab6db; margin-top: px(6);}
       }
     }
     .籍贯 {
-      height: px(753);
-      background: transparent;
+      height: px(753); background: transparent;
       > .wrapper {
         position: relative;width: 100%;flex: 1;
         display: flex; flex-direction: column;
@@ -221,7 +180,7 @@
             background: #1cecd9;
           }
         }
-        .notes{
+        .notes {
           position: absolute;
           bottom: px(10);
           right: px(10);
@@ -230,7 +189,7 @@
     }
     .战果, .作案手段 {
       padding: 0 px(24);
-      >table {
+      > table {
         width: 100%; table-layout: fixed;
         margin-top: px(25);
         border-collapse: collapse;
