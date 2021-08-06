@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a51ac372-b7e7-4bb5-a873-083127267115" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/chart-14.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chart-11.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chart-11.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chart-12.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chart-12.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/chart-2.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/chart-2.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/home.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/home.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/shared/px.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/shared/px.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1628254772971</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add chart 14">
+      <created>1628256512058</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1628256512058</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,6 +177,7 @@
     <MESSAGE value="add dist" />
     <MESSAGE value="add chart 12" />
     <MESSAGE value="add chart 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="add chart 13" />
+    <MESSAGE value="add chart 14" />
+    <option name="LAST_COMMIT_MESSAGE" value="add chart 14" />
   </component>
 </project>
